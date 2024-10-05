@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16pt;
+  color: #eeeeee;
+}
+body{
+    min-height: 100vh;
+    padding: 10px;
+    /* background-color: #232924; */
+    background: linear-gradient(to bottom, #178800 10%, #001f75 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+:root{
+    --background: #101114;
+    --primary-color: #1C1D20;
+    --secondary-color: #4A4D57;
+    --accent-color: #00d9ff;
+    --text-color: #F9F9F9;
+}
+h1{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: cursive;
+    text-transform: uppercase;
+    text-align: center;
+    color: #00d9ff;
+}
+.wrapper{
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#todo-input{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 84%;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 1000px;
+    font: inherit;
+    color: #eeeeee;
+    caret-color: #00d9ff;
+}
+#todo-input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #00d9ff;
+}
+form{
+    position: relative;
+}
+#add-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #00d9ff;
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: #101114;
+    cursor: pointer;
+}
+.todo{
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: #18181a;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.todo .todo-text{
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+.delete-button{
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.delete-button svg{
+    transition: 200ms ease;
+    fill: #9e0020;
+}
+.delete-button:hover svg{
+    fill: #ff0037;
+}
+.custom-checkbox{
+    border: 2px solid #00d9ff;
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    background-color: #00d9ff;
+}
+input[type="checkbox"]:checked ~ .custom-checkbox svg{
+    fill: #1C1D20;
+}
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: #444546;
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+#delete-all-button {
+    background-color: #ff0037;
+    height: auto;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: #101114;
+    cursor: pointer;
+    width: 100%;
+}
+#delete-all-button:hover {
+    background-color: #ff3366;
+}
+#delete-all-button {
+    display: none; /* Initially hidden */
+    background-color: #ff0037;
+    height: auto;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: #101114;
+    cursor: pointer;
+    width: 100%;
+}
+#delete-all-button:hover {
+    background-color: #ff3366;
+}
+
+
+@media(max-width: 500px){
+    html{
+        font-size: 12pt;
+    }
+    #add-button{
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+    h1{
+        margin-top: 50px;
+        font-size: 15vw;
+    }
+    #todo-input{
+       width: 100%;
+    }
+}
+
+.footer{
+   text-align: center;
+   padding: 10px 0;
+   margin-top: 50px;
+   justify-content: bottom;
+}
+
+.footer{
+   color: #bdbdbd;
+   margin: 0;
+   font-size: 16px;
+   padding: 7px;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-button {
+    margin-top: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green */
+    color: #ffffff; /* White */
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
